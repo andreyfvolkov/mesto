@@ -10,4 +10,4 @@
 Остается только пожелать всем удачи в освоении нового материала!
 
 Следить за развитием (очень надеюсь) проекта можно по ссылке:  
-[https://github.com/andreyfvolkov/mesto.git]
+[https://github.com/andreyfvolkov/mesto]
