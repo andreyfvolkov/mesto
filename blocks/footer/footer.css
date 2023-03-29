@@ -1,0 +1,14 @@
+.footer {
+  height: 142px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 479px) {
+  .footer {
+    height: 89px;
+  }
+}

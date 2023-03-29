@@ -1,0 +1,13 @@
+.element {
+  padding-top: 51px;
+  padding-bottom: 7px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 479px) {
+  .element {
+    padding-top: 36px;
+    padding-bottom: 12px;
+  }
+}

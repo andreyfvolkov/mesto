@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Место</title>
+    <link rel="stylesheet" href="pages/index.css">
+</head>
+
+<body class="page">
+    <header class="header">
+        <img class="header__logo" src="images/logo.svg" alt="Логотип">
+        <hr class="header__line">
+    </header>
+    <main>
+        <section class="profile page__container">
+            <div class="profile__info">
+                <img class="profile__avatar" src="images/profile-avatar_Cousteau.jpg" alt="Жак-Ив Кусто">
+                <h1 class="profile__name">Жак-Ив Кусто</h1>
+                <button class="profile__edit-button" type="button"></button>
+                <p class="profile__description">Исследователь океана</p>
+            </div>
+            <button class="profile__add-button" type="button"></button>
+        </section>
+        <section class="element page__container">
+            <ul class="element__list">
+                <li class="element__item">
+                    <img class="element__image" src="images/element_karachaevsk.jpg" alt="Старая церковь">
+                    <div class="element__info">
+                        <h2 class="element__title">Карачаевск</h2>
+                        <button class="element__heart-icon" type="button"></button>
+                    </div>
+                </li>
+                <li class="element__item">
+                    <img class="element__image" src="images/element_elbrus.jpg" alt="Эльбрус">
+                    <div class="element__info">
+                        <h2 class="element__title">Гора Эльбрус</h2>
+                        <button class="element__heart-icon" type="button"></button>
+                    </div>
+                </li>
+                <li class="element__item">
+                    <img class="element__image" src="images/element_dombay.jpg" alt="Эльбрус">
+                    <div class="element__info">
+                        <h2 class="element__title">Домбай</h2>
+                        <button class="element__heart-icon" type="button"></button>
+                    </div>
+                </li>
+                <li class="element__item">
+                    <img class="element__image" src="images/element_elbrus.jpg" alt="Эльбрус">
+                    <div class="element__info">
+                        <h2 class="element__title">Гора Эльбрус</h2>
+                        <button class="element__heart-icon" type="button"></button>
+                    </div>
+                </li>
+                <li class="element__item">
+                    <img class="element__image" src="images/element_dombay.jpg" alt="Эльбрус">
+                    <div class="element__info">
+                        <h2 class="element__title">Домбай</h2>
+                        <button class="element__heart-icon" type="button"></button>
+                    </div>
+                <li class="element__item">
+                    <img class="element__image" src="images/element_karachaevsk.jpg" alt="Старая церковь">
+                    <div class="element__info">
+                        <h2 class="element__title">Карачаево-Черкессия</h2>
+                        <button class="element__heart-icon" type="button"></button>
+                    </div>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer page__container">
+        <p class="footer__copyright">&#169; 2020 Mesto Russia</p>
+    </footer>
+    <section class="popup popup_type_profile-edit">
+        <div class="popup__container">
+            <button class="popup__close popup__close_type_profile-edit" type="button"></button>
+            <form class="popup__form popup__form_type_profile-edit">
+                <h2 class="popup__title">Редактировать профиль</h2>
+                <input class="popup__input popup__input_type_name" type="text">
+                <input class="popup__input popup__input_type_description" type="text">
+                <button class="popup__bottom-submit popup__bottom-submit_type_profile-edit" type="submit"></button>
+            </form>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>

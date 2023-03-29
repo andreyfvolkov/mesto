@@ -1,0 +1,8 @@
+.element__info {
+  margin: 0;
+  padding: 25px 0 25px 0;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

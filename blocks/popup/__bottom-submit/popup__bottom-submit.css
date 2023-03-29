@@ -1,0 +1,19 @@
+.popup__bottom-submit {
+  margin: 28px 0 0 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 50px;
+  display: block;
+  background-image: url(../../../images/popup_submit_button.svg);
+  background-size: contain;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 539px) {
+  .popup__bottom-submit {
+    margin-top: 26px;
+    height: 46px;
+    background-image: url(../../../images/popup_submit_button_mobile.svg);
+  }
+}
