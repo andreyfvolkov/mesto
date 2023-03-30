@@ -3,8 +3,8 @@
   grid-template-columns: 132px auto auto;
   grid-template-rows: 70px auto;
   grid-template-areas:
-    "profile__avatar profile__title profile__edit-button"
-    "profile__avatar  profile__subtitle profile__subtitle";
+    "profile__avatar profile__name profile__edit-button"
+    "profile__avatar  profile__description profile__description";
   column-gap: 18px;
   row-gap: 9px;
 }
@@ -15,8 +15,8 @@
     grid-template-rows: 140px auto auto;
     grid-template-areas:
       "profile__avatar profile__avatar profile__avatar"
-      ". profile__title profile__edit-button"
-      "profile__subtitle profile__subtitle profile__subtitle";
+      ". profile__name profile__edit-button"
+      "profile__description profile__description profile__description";
     column-gap: 12px;
   }
 }

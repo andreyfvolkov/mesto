@@ -1,19 +1,23 @@
 .popup__bottom-submit {
-  margin: 28px 0 0 0;
+  margin: 28px 0 37px 0;
   padding: 0;
   border: 0;
   width: 100%;
   height: 50px;
-  display: block;
-  background-image: url(../../../images/popup_submit_button.svg);
-  background-size: contain;
+  font-size: 18px;
+  line-height: 121%;
+  font-weight: 400;
+  color: white;
+  background-color: black;
+  border-radius: 2px;
   cursor: pointer;
 }
 
 @media screen and (max-width: 539px) {
   .popup__bottom-submit {
     margin-top: 26px;
+    margin-bottom: 25px;
     height: 46px;
-    background-image: url(../../../images/popup_submit_button_mobile.svg);
+    font-size: 14px;
   }
 }

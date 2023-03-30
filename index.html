@@ -11,60 +11,59 @@
 <body class="page">
     <header class="header">
         <img class="header__logo" src="images/logo.svg" alt="Логотип">
-        <hr class="header__line">
     </header>
     <main>
         <section class="profile page__container">
             <div class="profile__info">
                 <img class="profile__avatar" src="images/profile-avatar_Cousteau.jpg" alt="Жак-Ив Кусто">
                 <h1 class="profile__name">Жак-Ив Кусто</h1>
-                <button class="profile__edit-button" type="button"></button>
+                <button class="profile__edit-button" type="button" aria-label="edit"></button>
                 <p class="profile__description">Исследователь океана</p>
             </div>
-            <button class="profile__add-button" type="button"></button>
+            <button class="profile__add-button" type="button" aria-label="add"></button>
         </section>
-        <section class="element page__container">
-            <ul class="element__list">
-                <li class="element__item">
+        <section class="elements page__container">
+            <ul class="elements__list">
+                <li class="element">
                     <img class="element__image" src="images/element_karachaevsk.jpg" alt="Старая церковь">
                     <div class="element__info">
                         <h2 class="element__title">Карачаевск</h2>
-                        <button class="element__heart-icon" type="button"></button>
+                        <button class="element__heart-icon" type="button" aria-label="heart-icon"></button>
                     </div>
                 </li>
-                <li class="element__item">
+                <li class="element">
                     <img class="element__image" src="images/element_elbrus.jpg" alt="Эльбрус">
                     <div class="element__info">
                         <h2 class="element__title">Гора Эльбрус</h2>
-                        <button class="element__heart-icon" type="button"></button>
+                        <button class="element__heart-icon" type="button" aria-label="heart-icon"></button>
                     </div>
                 </li>
-                <li class="element__item">
+                <li class="element">
                     <img class="element__image" src="images/element_dombay.jpg" alt="Эльбрус">
                     <div class="element__info">
                         <h2 class="element__title">Домбай</h2>
-                        <button class="element__heart-icon" type="button"></button>
+                        <button class="element__heart-icon" type="button" aria-label="heart-icon"></button>
                     </div>
                 </li>
-                <li class="element__item">
+                <li class="element">
                     <img class="element__image" src="images/element_elbrus.jpg" alt="Эльбрус">
                     <div class="element__info">
                         <h2 class="element__title">Гора Эльбрус</h2>
-                        <button class="element__heart-icon" type="button"></button>
+                        <button class="element__heart-icon" type="button" aria-label="heart-icon"></button>
                     </div>
                 </li>
-                <li class="element__item">
+                <li class="element">
                     <img class="element__image" src="images/element_dombay.jpg" alt="Эльбрус">
                     <div class="element__info">
                         <h2 class="element__title">Домбай</h2>
-                        <button class="element__heart-icon" type="button"></button>
+                        <button class="element__heart-icon" type="button" aria-label="heart-icon"></button>
                     </div>
                 </li>
-                <li class="element__item">
+                <li class="element">
                     <img class="element__image" src="images/element_karachaevsk.jpg" alt="Старая церковь">
                     <div class="element__info">
                         <h2 class="element__title">Карачаево-Черкессия</h2>
-                        <button class="element__heart-icon" type="button"></button>
+                        <button class="element__heart-icon" type="button" aria-label="heart-icon"></button>
                     </div>
                 </li>
             </ul>
@@ -73,18 +72,20 @@
     <footer class="footer page__container">
         <p class="footer__copyright">&#169; 2020 Mesto Russia</p>
     </footer>
-    <section class="popup popup_type_profile-edit">
+    <div class="popup popup_type_profile-edit">
         <div class="popup__container">
-            <button class="popup__close popup__close_type_profile-edit" type="button"></button>
-            <form class="popup__form popup__form_type_profile-edit">
+            <button class="popup__close" type="button" aria-label="close"></button>
+            <form class="popup__form" name="name">
                 <h2 class="popup__title">Редактировать профиль</h2>
-                <input class="popup__input popup__input_type_name" type="text">
-                <input class="popup__input popup__input_type_description" type="text">
-                <button class="popup__bottom-submit popup__bottom-submit_type_profile-edit" type="submit"></button>
+                <input class="popup__input popup__input_type_name" type="text" name="name" required
+                    placeholder="Укажите имя">
+                <input class="popup__input popup__input_type_description" type="text" name="name" required
+                    placeholder="Дайте описание">
+                <button class="popup__bottom-submit" type="submit">Сохранить</button>
             </form>
         </div>
-    </section>
-    <script src="index.js"></script>
+    </div>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>

@@ -6,7 +6,7 @@
   height: 19px;
   background-image: url(../../../images/element_heart_icon.svg);
   background-size: contain;
-  background-color: #ffffff;
+  background-color: transparent;
   cursor: pointer;
 }
 

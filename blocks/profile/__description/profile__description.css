@@ -8,7 +8,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  grid-area: profile__subtitle;
+  grid-area: profile__description;
 }
 
 @media screen and (max-width: 767px) {
@@ -19,6 +19,7 @@
 
 @media screen and (max-width: 479px) {
   .profile__description {
+    max-width: 282px;
     font-size: 14px;
   }
 }
