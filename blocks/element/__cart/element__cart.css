@@ -1,0 +1,17 @@
+.element__cart {
+  padding: 0;
+  border: 0;
+  width: 18px;
+  height: 19px;
+  position: absolute;
+  top: 20px;
+  left: 244px;
+  background-image: url(../../../images/element_trash.svg);
+  background-size: contain;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.element__cart:hover {
+  opacity: 0.6;
+}

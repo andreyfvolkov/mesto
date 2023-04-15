@@ -1,0 +1,15 @@
+.popup__place-caption {
+  margin: 0;
+  max-width: 291px;
+  display: block;
+  position: absolute;
+  bottom: -32px;
+  left: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 121%;
+  color: #ffffff;
+}
