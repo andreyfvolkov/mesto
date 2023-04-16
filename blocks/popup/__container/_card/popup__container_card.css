@@ -1,4 +1,4 @@
-.popup__container_type_card {
+.popup__container_card {
   width: 430px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 1);
@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width: 539px) {
-  .popup__container_type_card {
+  .popup__container_card {
     width: 282px;
     padding: 26px 0 0 0;
   }

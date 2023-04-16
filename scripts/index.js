@@ -23,8 +23,8 @@ const openPopup = function(popup) {
 profileEditButton.addEventListener("click", function() {
   openPopup(profileEditPopup);
 
-inputName.value = profileName.textContent;
-inputDescription.value = profileDescription.textContent;
+  inputName.value = profileName.textContent;
+  inputDescription.value = profileDescription.textContent;
 });
 
 const closePopup = function(popup) {
