@@ -17,23 +17,23 @@ const elementImagePopup = document.querySelector(".popup_type_image");
 const elementImagePopupClose = elementImagePopup.querySelector(".popup__close");
 
 const openPopup = function(popup) {
-    popup.classList.add("popup_opened");
-   };
+  popup.classList.add("popup_opened");
+};
 
 profileEditButton.addEventListener("click", function() {
-    openPopup(profileEditPopup);
+  openPopup(profileEditPopup);
 
 inputName.value = profileName.textContent;
 inputDescription.value = profileDescription.textContent;
 });
 
 const closePopup = function(popup) {
-    popup.classList.remove("popup_opened");
+  popup.classList.remove("popup_opened");
 };
 
 profileEditPopupClose.addEventListener("click", function() {
-    closePopup(profileEditPopup);
-    });
+  closePopup(profileEditPopup);
+});
 
 profileEditPopupForm.addEventListener("submit", function (event) {
 event.preventDefault();
@@ -45,8 +45,8 @@ closePopup(profileEditPopup);
 
 const createCardElement = function(cardData) { //функциональное выражение создания елемента-карточки
   const cardElement = elementTamplate.content
-  .querySelector(".element")
-  .cloneNode(true); //делаем копию элемента-карточки
+    .querySelector(".element") //извлекаем все данные из .element template-a
+    .cloneNode(true); //делаем копию элемента-карточки (template)
 
   const elementPlace = cardElement.querySelector(".element__place");
   const elementPlaceImage = cardElement.querySelector(".element__place-image");
@@ -56,67 +56,68 @@ const createCardElement = function(cardData) { //функциональное в
   elementPlaceImage.alt = cardData.name;
 
   elementPlaceImage.addEventListener("click", function() {
-    elementImagePopup.querySelector(".popup__place-image").src = cardData.link;
-    elementImagePopup.querySelector(".popup__place-caption").textContent = cardData.name;
-    openPopup(elementImagePopup);
-  });
-
-  elementImagePopupClose.addEventListener("click", function() {
-    closePopup(elementImagePopup);
+  elementImagePopup.querySelector(".popup__place-image").src = cardData.link;
+  elementImagePopup.querySelector(".popup__place-image").alt = cardData.name;
+  elementImagePopup.querySelector(".popup__place-caption").textContent = cardData.name;
+  openPopup(elementImagePopup);
   });
 
   const deleteButton = cardElement.querySelector(".element__cart");
   const likeButton = cardElement.querySelector(".element__heart-icon");
 
   const handleDelete = function() {
-      cardElement.remove();
+    cardElement.remove();
   };
 
   const handleLike = function() {
-      likeButton.classList.toggle("element__heart-icon_active"); //функция добавления или удаления модификатора
+    likeButton.classList.toggle("element__heart-icon_active"); //функция добавления или удаления модификатора
   };
 
-    deleteButton.addEventListener("click", handleDelete);
+  deleteButton.addEventListener("click", handleDelete);
 
-    likeButton.addEventListener("click", handleLike);
+  likeButton.addEventListener("click", handleLike);
 
-    return(cardElement);
+  return(cardElement); //главное назначение функции по созданию элемента-карточки
 };
 
-  const renderCardElement = function(cardElement) { //отдаем элемент-карточку в начало списка элементов
-    elementList.prepend(cardElement);
+elementImagePopupClose.addEventListener("click", function() {
+  closePopup(elementImagePopup);
+});
+
+const renderCardElement = function(cardElement) { //отдаем элемент-карточку в начало списка элементов
+  elementList.prepend(cardElement);
+};
+
+initialCards.forEach (function(element) { //на каждой итерации проходим по массиву, находим объект
+  const createCard = createCardElement(element); //создаем элемент-карточку
+  renderCardElement(createCard) //отдаем созданный элемент в список элементов
+});
+
+profileAddButton.addEventListener("click", function() {
+  openPopup(profileAddPopup);
+});
+
+profileAddPopupClose.addEventListener("click", function() {
+  closePopup(profileAddPopup);
+});
+
+const handleAddCardSubmit = function(event) {
+  event.preventDefault();
+
+  const inputPlace = profileAddPopupForm.querySelector(".popup__input_type_place");
+  const inputPlaceLink = profileAddPopupForm.querySelector(".popup__input_type_place-link");
+
+  const place = inputPlace.value;
+  const placeLink = inputPlaceLink.value;
+
+  const cardData = {
+    name: place,
+    link: placeLink,
   };
 
-  initialCards.forEach (function(element) { //проходим по массиву для выполнения функции 
-    const createCard = createCardElement(element); //создаем элемент-карточку
-    renderCardElement(createCard) //отдаем созданный элемент в список элементов
-  });
+  renderCardElement(createCardElement(cardData)); //отдаем данные созданного элемента-карточки
+  closePopup(profileAddPopup);
+  profileAddPopupForm.reset();
+};
 
-  profileAddButton.addEventListener("click", function() {
-    openPopup(profileAddPopup);
-  });
-
-  profileAddPopupClose.addEventListener("click", function() {
-    closePopup(profileAddPopup);
-    });
-
-  const handleAddCardSubmit = function(event) {
-    event.preventDefault();
-
-    const inputPlace = profileAddPopupForm.querySelector(".popup__input_type_place");
-    const inputPlaceLink = profileAddPopupForm.querySelector(".popup__input_type_place-link");
-
-    const place = inputPlace.value;
-    const placeLink = inputPlaceLink.value;
-
-    const cardData = {
-      name: place,
-      link: placeLink,
-    };
-
-    renderCardElement(createCardElement(cardData)); //отдаем данные созданного элемента-карточки
-    closePopup(profileAddPopup);
-     };
-
-  profileAddPopupForm.addEventListener("submit", handleAddCardSubmit); //передаем фукцию создания нового элемента-карточки
-
+profileAddPopupForm.addEventListener("submit", handleAddCardSubmit); //передаем фукцию создания нового элемента-карточки
